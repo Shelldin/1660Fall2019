@@ -1,8 +1,9 @@
 //Maya ASCII 2018 scene
 //Name: Tire3.4.ma
-//Last modified: Thu, Oct 31, 2019 11:18:24 AM
+//Last modified: Thu, Oct 31, 2019 11:31:04 AM
 //Codeset: 1252
 requires maya "2018";
+requires "stereoCamera" "10.0";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
@@ -14,13 +15,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "F9287AB3-4B16-A87B-33DB-388B2AF0255C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 85.93679302676459 240.83599484960212 5.8377633861428251 ;
-	setAttr ".r" -type "double3" -59.13835274684898 458.19999999986186 2.5444437451708134e-14 ;
+	setAttr ".t" -type "double3" -121.94618058304114 151.3103307171113 -19.101589213407053 ;
+	setAttr ".r" -type "double3" -32.73835274693581 619.39999999977806 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7E3D2F3A-42FD-B517-CED4-7A92E40A528B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 177.37780254286872;
+	setAttr ".coi" 152.45391857373144;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1800,19 +1801,19 @@ parent -s -nc -r -add "|pPipe23|polySurface2|polySurfaceShape2" "polySurface20" 
 parent -s -nc -r -add "|pPipe23|polySurface2|polySurfaceShape2" "polySurface21" ;
 parent -s -nc -r -add "|pPipe23|polySurface2|polySurfaceShape2" "polySurface22" ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "422FF144-4793-68C0-AB23-8BB98BE1407D";
+	rename -uid "8D211336-4FD5-A73A-9C13-0FA0788A3BBD";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "0DFD463C-4888-7CB8-8E7B-CC81C9B6A0AD";
+	rename -uid "F748F115-4F40-EF71-08E6-0CB9665752CD";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "F3E2BA4F-4C78-731D-49F5-FDB56437D719";
+	rename -uid "406DC1CF-4E7E-E36E-1423-8797F5DCDAF6";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "434175AC-4991-0958-D51A-0B98B519FF52";
+	rename -uid "7471F6FA-46CB-A435-88E9-898B21080AF0";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "7B45F1E2-4724-F62A-0645-7BAB3CD2B7E9";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "9F0D3A63-43E4-3D10-2B61-2CBB341BCB5C";
+	rename -uid "FC2E8FF3-42FF-6A73-2473-12BFC7F78ABB";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "8E696D38-449C-3E89-ED45-0280376D9970";
 	setAttr ".g" yes;
